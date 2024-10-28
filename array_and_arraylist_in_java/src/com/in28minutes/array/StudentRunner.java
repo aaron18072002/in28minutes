@@ -30,6 +30,11 @@ public class StudentRunner {
 		System.out.println(student2.getMinimumMark());
 		
 		System.out.println(student2.getAverageMark());
+		
+		System.out.println("-----------------");
+		
+		System.out.println(student1.toString());
+		System.out.println(student2.toString());
 	}
 
 }
