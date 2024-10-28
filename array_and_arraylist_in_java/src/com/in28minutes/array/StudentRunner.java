@@ -9,6 +9,8 @@ public class StudentRunner {
 				5,8,9
 		});
 		
+		Student student2 = new Student("Nemo",3,2,5,9);
+		
 		System.out.println(student1.getNumberOfMarks());
 		System.out.println(student1.getTotalSumOfMarks());
 		
@@ -17,6 +19,17 @@ public class StudentRunner {
 		System.out.println(student1.getMinimumMark());
 		
 		System.out.println(student1.getAverageMark());
+		
+		System.out.println("-----------------");
+		
+		System.out.println(student2.getNumberOfMarks());
+		System.out.println(student2.getTotalSumOfMarks());
+		
+		System.out.println(student2.getMaximumMark());
+		
+		System.out.println(student2.getMinimumMark());
+		
+		System.out.println(student2.getAverageMark());
 	}
 
 }
