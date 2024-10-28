@@ -21,7 +21,7 @@ public class StringDaysOfWeek {
 		return mostOfCharactersDay;
 	}
 	
-	public String[] getDaysOfWeekBackward() {
+	public String[] getDaysOfWeek() {
 		String[] days = new String[5];
 		int index = 0;
 		for(int i = 0; i <= this.days.length - 1; i++) {
