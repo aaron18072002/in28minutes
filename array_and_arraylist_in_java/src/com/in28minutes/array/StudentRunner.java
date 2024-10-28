@@ -22,6 +22,9 @@ public class StudentRunner {
 		
 		System.out.println("-----------------");
 		
+		student2.addNewMark(10);
+		student2.removeMarkAtIndex(1);
+		
 		System.out.println(student2.getNumberOfMarks());
 		System.out.println(student2.getTotalSumOfMarks());
 		

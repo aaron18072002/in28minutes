@@ -78,4 +78,12 @@ public class Student {
 	public String toString() {
 		return this.name + " " + this.marks;
 	}
+	
+	public void addNewMark(int mark) {
+		this.marks.add(mark);
+	}
+	
+	public void removeMarkAtIndex(int index) {
+		this.marks.remove(index);
+	}
 }
