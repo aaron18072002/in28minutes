@@ -26,4 +26,10 @@ public class Customer {
 		this.workAddress = workAddress;
 	}
 	
+	@Override
+	public String toString() {
+		return String.format("name - %s,homeAddress - [%s],workAddress - [%s]",
+				this.name, this.homeAddress.toString(), 
+				this.workAddress == null ? "" : this.workAddress.toString());
+	}
 }
