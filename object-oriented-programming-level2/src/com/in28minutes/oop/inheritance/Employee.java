@@ -8,8 +8,9 @@ public class Employee extends Person {
 	private int employeeGrade;
 	private BigDecimal salary;
 	
-	public Employee() {
-		super();
+	public Employee(String id, String name, String title) {
+		super(id, name);
+		this.title = title;
 	}
 
 	public String getTitle() {

@@ -5,8 +5,9 @@ public class Person {
 	private String name;
 	private String email;
 	
-	public Person() {
-		
+	public Person(String id, String name) {
+		this.id = id;
+		this.name = name;
 	}
 	
 	public String getId() {
@@ -18,9 +19,9 @@ public class Person {
 	public String getName() {
 		return name;
 	}
-	public void setName(String name) {
-		this.name = name;
-	}
+//	public void setName(String name) {
+//		this.name = name;
+//	}
 	public String getEmail() {
 		return email;
 	}
@@ -31,7 +32,7 @@ public class Person {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return String.format("id - %s,name - %s,email - %s,", 
+		return String.format("id - %s,name - %s,email - %s", 
 					this.id,this.name,this.email);
 	}
 }
