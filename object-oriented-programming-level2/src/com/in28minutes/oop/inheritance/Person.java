@@ -27,4 +27,11 @@ public class Person {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return String.format("id - %s,name - %s,email - %s", 
+					this.id,this.name,this.email);
+	}
 }
