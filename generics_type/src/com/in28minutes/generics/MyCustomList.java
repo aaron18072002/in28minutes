@@ -3,7 +3,7 @@ package com.in28minutes.generics;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MyCustomList<T> {
+public class MyCustomList<T extends Number> {
 	private List<T> list;
 	
 	public MyCustomList(List<T> list) {
