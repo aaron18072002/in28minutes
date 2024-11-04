@@ -2,6 +2,7 @@ package com.in28minutes.functional_programming;
 
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class LambdaBehindTheScreenRunner {
@@ -21,6 +22,14 @@ public class LambdaBehindTheScreenRunner {
 		}		
 	}
 	
+	public static class SquareOfNumberFunctional implements Function<Integer, Integer> {
+		@Override
+		public Integer apply(Integer num) {
+			// TODO Auto-generated method stub
+			return num*num;
+		}	
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		List.of(23,43,34,45,36,48).stream()
@@ -32,6 +41,14 @@ public class LambdaBehindTheScreenRunner {
 		List<Integer> numbers = List.of(23,43,34,45,36,48);
 		
 		printEvenNumber(numbers, new EvenNumberPredicate());
+		
+		System.out.println("---------------");
+		
+		numbers.stream().filter(num -> num%2 == 0)
+						.map(new SquareOfNumberFunctional())
+						.forEach(num -> {
+							System.out.println(num);
+						});
 	}	
 	
 	public static void printEvenNumber
