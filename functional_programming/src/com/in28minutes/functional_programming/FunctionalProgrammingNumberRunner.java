@@ -15,7 +15,10 @@ public class FunctionalProgrammingNumberRunner {
 	}
 	
 	private static int sumOfNumbers(List<Integer> nums) {
-		return nums.stream().filter(num -> num%2==1)
-							.reduce(0, (num1,num2) -> num1 + num2);
+		return nums.stream().filter(num -> true)
+							.reduce(0, (num1,num2) -> {
+								System.out.printf("%d %d",num1,num2).println();
+								return num1 + num2;
+							});
 	}
 }
