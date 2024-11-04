@@ -1,6 +1,7 @@
 package com.in28minutes.functional_programming;
 
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 public class LambdaBehindTheScreenRunner {
@@ -12,11 +13,19 @@ public class LambdaBehindTheScreenRunner {
 		}	
 	}
 	
+	private static class SystemOutConsumer implements Consumer<Integer> {
+		@Override
+		public void accept(Integer num) {
+			// TODO Auto-generated method stub
+			System.out.println(num);
+		}		
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		List.of(23,43,34,45,36,48).stream()
 				.filter(new EvenNumberPredicate())
-				.forEach(num -> System.out.println(num));
+				.forEach(new SystemOutConsumer());
 		
 		System.out.println("---------------");
 		
