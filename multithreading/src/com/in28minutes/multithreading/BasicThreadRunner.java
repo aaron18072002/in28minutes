@@ -23,7 +23,7 @@ public class BasicThreadRunner {
 		}		
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		
 		//Task1
@@ -37,6 +37,10 @@ public class BasicThreadRunner {
 		Thread threadOfTask2 = new Thread(new Task2());
 		threadOfTask2.setPriority(10);
 		threadOfTask2.start();
+		
+		//Waits for task1 and task2 threads to die
+		task1.join();
+		threadOfTask2.join();
 		
 		//Task3
 		System.out.println("Task3 kick off");
