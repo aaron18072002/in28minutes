@@ -29,11 +29,13 @@ public class BasicThreadRunner {
 		//Task1
 		System.out.println("Task1 kick off");
 		Thread task1 = new Task1();
+		task1.setPriority(1);
 		task1.start();
 		
 		//Task2
 		System.out.println("Task2 kick off");
 		Thread threadOfTask2 = new Thread(new Task2());
+		threadOfTask2.setPriority(10);
 		threadOfTask2.start();
 		
 		//Task3
