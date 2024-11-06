@@ -8,8 +8,8 @@ public class FinalRunner {
 		// TODO Auto-generated method
 		Scanner sc = null;
 		try {
-			sc = new Scanner(System.in);
-		} catch (Exception ex) {
+				sc = new Scanner(System.in);
+			} catch (Exception ex) {
 			ex.printStackTrace();
 		} finally {
 			if(sc != null) {
