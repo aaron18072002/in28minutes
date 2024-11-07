@@ -1,5 +1,11 @@
 package exception_handling;
 
+class CurrenciesDoesNotMatch extends Exception {
+	public CurrenciesDoesNotMatch(String msg) {
+		super(msg);
+	}
+}
+
 class Amount {
 	private String currency;
 	private int amount;	
@@ -11,7 +17,7 @@ class Amount {
 	
 	public void add(Amount amount) throws Exception {
 		if(!amount.currency.equals(this.currency)) {
-			throw new Exception
+			throw new CurrenciesDoesNotMatch
 				("Currencies arent match " + this.currency + " and " + amount.currency);
 		}
 		this.amount += amount.amount;
