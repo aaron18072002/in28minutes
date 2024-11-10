@@ -15,7 +15,12 @@ class Client {
 	@Override
 	public int hashCode() {
 		// TODO Auto-generated method stub
-		return super.hashCode();
+		final int prime = 31;
+		int result = 1;
+		
+		result = result*prime + this.id;
+		
+		return result;
 	}
 
 	@Override
