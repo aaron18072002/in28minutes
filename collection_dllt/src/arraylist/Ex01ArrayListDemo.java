@@ -1,6 +1,8 @@
 package arraylist;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Ex01ArrayListDemo {
@@ -47,6 +49,19 @@ public class Ex01ArrayListDemo {
 		List<Integer> lis6 = new ArrayList<Integer>(List.of(1,2,3,4,5,6));
 		lis6.set(2, 99);
 		System.out.println("lis6 sau khi set 99 tại index 2 --> " + lis6);
+		
+		// Kiểm tra Collection có phần tử nào đó hay ko
+		List<Integer> lis7 = new ArrayList<Integer>(List.of(1,2,3,4,5,6));
+		System.out.println("Có 4 hay ko --> " + lis7.contains(4));
+		
+		// Sắp xếp tăng dần
+		List<Integer> lis8 = new ArrayList<Integer>(List.of(6,5,4,3,2,1));
+		Collections.sort(lis8, (n1,n2) -> Integer.compare(n1, n2));
+		System.out.println("lis8 sau khi sắp xếp --> " + lis8);
+		
+		// Tìm vị trí đầu tiên xuất hiện
+		List<Integer> lis9 = new ArrayList<Integer>(List.of(6,5,4,3,2,1));
+		System.out.println("vị trí của 9 là: " + lis9.indexOf(9));
 	}
 	
 }
